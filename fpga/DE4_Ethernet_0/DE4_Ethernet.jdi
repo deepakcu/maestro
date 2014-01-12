@@ -1,0 +1,336 @@
+<sld_project_info>
+  <file_info>
+    <file checksum="0x0CC1EEF5" device="EP4SGX230KF40C2" path="DE4_Ethernet.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <hub_info ir_width="8" node_count="5"/>
+  <node_info>
+    <node hpath="DE4_SOPC:SOPC_INST|DE4_SOPC_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" instance_id="0" mfg_id="110" node_id="132" sld_node_info="0xC206E00" version="1">
+      <parameters>
+        <parameter name="sld_mfg_id" type="dec" value="110"/>
+        <parameter name="sld_type_id" type="dec" value="132"/>
+        <parameter name="sld_version" type="dec" value="1"/>
+        <parameter name="sld_instance_index" type="dec" value="0"/>
+        <parameter name="sld_auto_instance_index" type="string" value="YES"/>
+        <parameter name="sld_ir_width" type="dec" value="3"/>
+        <parameter name="SLD_NODE_INFO" type="dec" value="203451904"/>
+      </parameters>
+      <inputs>
+        <port name="usr_tdo" source="DE4_SOPC:SOPC_INST|DE4_SOPC_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|tdo"/>
+        <port name="usr_ir_out[0]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[0]"/>
+        <port name="usr_ir_out[1]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[1]"/>
+        <port name="usr_ir_out[2]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[2]"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tck" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tck"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tms" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tms"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdi" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdi"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_tlr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_tlr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_rti" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_rti"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdrs" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdrs"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cdr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cdr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1dr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1dr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pdr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pdr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2dr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2dr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_udr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_udr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sirs" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sirs"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cir" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sir" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1ir" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1ir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pir" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2ir" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2ir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_uir" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_usr1" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_usr1"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_clr" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_clr"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ena" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ena"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_0_" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_0_"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_1_" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_1_"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_2_" source="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_2_"/>
+      </inputs>
+      <outputs>
+        <port name="usr_tck"/>
+        <port name="usr_tdi"/>
+        <port name="usr_ir_in[0]"/>
+        <port name="usr_ir_in[1]"/>
+        <port name="usr_ir_in[2]"/>
+        <port name="usr_virtual_state_cdr"/>
+        <port name="usr_virtual_state_sdr"/>
+        <port name="usr_virtual_state_e1dr"/>
+        <port name="usr_virtual_state_pdr"/>
+        <port name="usr_virtual_state_e2dr"/>
+        <port name="usr_virtual_state_udr"/>
+        <port name="usr_virtual_state_cir"/>
+        <port name="usr_virtual_state_uir"/>
+        <port name="usr_tms"/>
+        <port name="usr_jtag_state_tlr"/>
+        <port name="usr_jtag_state_rti"/>
+        <port name="usr_jtag_state_sdrs"/>
+        <port name="usr_jtag_state_cdr"/>
+        <port name="usr_jtag_state_sdr"/>
+        <port name="usr_jtag_state_e1dr"/>
+        <port name="usr_jtag_state_pdr"/>
+        <port name="usr_jtag_state_e2dr"/>
+        <port name="usr_jtag_state_udr"/>
+        <port name="usr_jtag_state_sirs"/>
+        <port name="usr_jtag_state_cir"/>
+        <port name="usr_jtag_state_sir"/>
+        <port name="usr_jtag_state_e1ir"/>
+        <port name="usr_jtag_state_pir"/>
+        <port name="usr_jtag_state_e2ir"/>
+        <port name="usr_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdo"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_0_"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_1_"/>
+        <port name="jtag.bp.SOPC_INST_master_0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_2_"/>
+      </outputs>
+    </node>
+    <node hpath="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_p0:p0|DE4_SOPC_mem_if_ddr2_emif_0_p0_memphy:umemphy|DE4_SOPC_mem_if_ddr2_emif_0_p0_phy_csr:phy_csr_inst|DE4_SOPC_mem_if_ddr2_emif_0_p0_iss_probe:pll_probe|altsource_probe:iss_probe_inst" instance_id="0" mfg_id="110" node_id="9" sld_node_info="0x486E00" version="0">
+      <parameters>
+        <parameter name="lpm_type" type="string" value="altsource_probe"/>
+        <parameter name="lpm_hint" type="string" value="UNUSED"/>
+        <parameter name="sld_auto_instance_index" type="string" value="YES"/>
+        <parameter name="sld_instance_index" type="dec" value="0"/>
+        <parameter name="SLD_NODE_INFO" type="dec" value="4746752"/>
+        <parameter name="sld_ir_width" type="dec" value="4"/>
+        <parameter name="instance_id" type="string" value="PROB"/>
+        <parameter name="probe_width" type="dec" value="1"/>
+        <parameter name="source_width" type="dec" value="0"/>
+        <parameter name="source_initial_value" type="string" value="0"/>
+        <parameter name="enable_metastability" type="string" value="NO"/>
+      </parameters>
+      <inputs>
+        <port name="probe[0]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_p0:p0|DE4_SOPC_mem_if_ddr2_emif_0_p0_memphy:umemphy|DE4_SOPC_mem_if_ddr2_emif_0_p0_phy_csr:phy_csr_inst|DE4_SOPC_mem_if_ddr2_emif_0_p0_iss_probe:pll_probe|probe_input[0]"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_raw_tck" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_raw_tck"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_tdi" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_tdi"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_usr1" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_usr1"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_cdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_cdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_sdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_sdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_e1dr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_e1dr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_udr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_udr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_cir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_cir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_uir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_tlr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_jtag_state_tlr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_clrn" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_clrn"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ena" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ena"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_0_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_0_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_1_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_1_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_2_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_2_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_3_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_in_3_"/>
+      </inputs>
+      <outputs>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_out_0_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_out_1_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_out_2_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_ir_out_3_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_p0_umemphy_phy_csr_inst_pll_probe_iss_probe_inst_tdo"/>
+      </outputs>
+    </node>
+    <node hpath="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:dmaster|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" instance_id="1" mfg_id="110" node_id="132" sld_node_info="0xC206E01" version="1">
+      <parameters>
+        <parameter name="sld_mfg_id" type="dec" value="110"/>
+        <parameter name="sld_type_id" type="dec" value="132"/>
+        <parameter name="sld_version" type="dec" value="1"/>
+        <parameter name="sld_instance_index" type="dec" value="0"/>
+        <parameter name="sld_auto_instance_index" type="string" value="YES"/>
+        <parameter name="sld_ir_width" type="dec" value="3"/>
+        <parameter name="SLD_NODE_INFO" type="dec" value="203451904"/>
+      </parameters>
+      <inputs>
+        <port name="usr_tdo" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:dmaster|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|tdo"/>
+        <port name="usr_ir_out[0]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:dmaster|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[0]"/>
+        <port name="usr_ir_out[1]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:dmaster|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[1]"/>
+        <port name="usr_ir_out[2]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:dmaster|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[2]"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tck" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tck"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tms" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tms"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdi" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdi"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_tlr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_tlr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_rti" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_rti"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdrs" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdrs"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1dr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1dr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2dr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2dr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_udr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_udr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sirs" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sirs"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1ir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1ir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2ir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2ir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_uir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_usr1" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_usr1"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_clr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_clr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ena" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ena"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_0_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_0_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_1_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_1_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_2_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_2_"/>
+      </inputs>
+      <outputs>
+        <port name="usr_tck"/>
+        <port name="usr_tdi"/>
+        <port name="usr_ir_in[0]"/>
+        <port name="usr_ir_in[1]"/>
+        <port name="usr_ir_in[2]"/>
+        <port name="usr_virtual_state_cdr"/>
+        <port name="usr_virtual_state_sdr"/>
+        <port name="usr_virtual_state_e1dr"/>
+        <port name="usr_virtual_state_pdr"/>
+        <port name="usr_virtual_state_e2dr"/>
+        <port name="usr_virtual_state_udr"/>
+        <port name="usr_virtual_state_cir"/>
+        <port name="usr_virtual_state_uir"/>
+        <port name="usr_tms"/>
+        <port name="usr_jtag_state_tlr"/>
+        <port name="usr_jtag_state_rti"/>
+        <port name="usr_jtag_state_sdrs"/>
+        <port name="usr_jtag_state_cdr"/>
+        <port name="usr_jtag_state_sdr"/>
+        <port name="usr_jtag_state_e1dr"/>
+        <port name="usr_jtag_state_pdr"/>
+        <port name="usr_jtag_state_e2dr"/>
+        <port name="usr_jtag_state_udr"/>
+        <port name="usr_jtag_state_sirs"/>
+        <port name="usr_jtag_state_cir"/>
+        <port name="usr_jtag_state_sir"/>
+        <port name="usr_jtag_state_e1ir"/>
+        <port name="usr_jtag_state_pir"/>
+        <port name="usr_jtag_state_e2ir"/>
+        <port name="usr_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdo"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_0_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_1_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_dmaster_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_2_"/>
+      </outputs>
+    </node>
+    <node hpath="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:if_csr_m0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" instance_id="2" mfg_id="110" node_id="132" sld_node_info="0xC206E02" version="1">
+      <parameters>
+        <parameter name="sld_mfg_id" type="dec" value="110"/>
+        <parameter name="sld_type_id" type="dec" value="132"/>
+        <parameter name="sld_version" type="dec" value="1"/>
+        <parameter name="sld_instance_index" type="dec" value="0"/>
+        <parameter name="sld_auto_instance_index" type="string" value="YES"/>
+        <parameter name="sld_ir_width" type="dec" value="3"/>
+        <parameter name="SLD_NODE_INFO" type="dec" value="203451904"/>
+      </parameters>
+      <inputs>
+        <port name="usr_tdo" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:if_csr_m0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|tdo"/>
+        <port name="usr_ir_out[0]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:if_csr_m0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[0]"/>
+        <port name="usr_ir_out[1]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:if_csr_m0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[1]"/>
+        <port name="usr_ir_out[2]" source="DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_dmaster:if_csr_m0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|altera_jtag_sld_node:node|sld_virtual_jtag_basic:sld_virtual_jtag_component|ir_out[2]"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tck" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tck"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tms" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_raw_tms"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdi" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdi"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_tlr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_tlr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_rti" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_rti"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdrs" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdrs"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1dr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1dr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pdr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pdr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2dr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2dr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_udr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_udr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sirs" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sirs"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_cir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_sir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1ir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e1ir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_pir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2ir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_e2ir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_uir" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_usr1" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_usr1"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_clr" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_clr"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ena" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ena"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_0_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_0_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_1_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_1_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_2_" source="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_in_2_"/>
+      </inputs>
+      <outputs>
+        <port name="usr_tck"/>
+        <port name="usr_tdi"/>
+        <port name="usr_ir_in[0]"/>
+        <port name="usr_ir_in[1]"/>
+        <port name="usr_ir_in[2]"/>
+        <port name="usr_virtual_state_cdr"/>
+        <port name="usr_virtual_state_sdr"/>
+        <port name="usr_virtual_state_e1dr"/>
+        <port name="usr_virtual_state_pdr"/>
+        <port name="usr_virtual_state_e2dr"/>
+        <port name="usr_virtual_state_udr"/>
+        <port name="usr_virtual_state_cir"/>
+        <port name="usr_virtual_state_uir"/>
+        <port name="usr_tms"/>
+        <port name="usr_jtag_state_tlr"/>
+        <port name="usr_jtag_state_rti"/>
+        <port name="usr_jtag_state_sdrs"/>
+        <port name="usr_jtag_state_cdr"/>
+        <port name="usr_jtag_state_sdr"/>
+        <port name="usr_jtag_state_e1dr"/>
+        <port name="usr_jtag_state_pdr"/>
+        <port name="usr_jtag_state_e2dr"/>
+        <port name="usr_jtag_state_udr"/>
+        <port name="usr_jtag_state_sirs"/>
+        <port name="usr_jtag_state_cir"/>
+        <port name="usr_jtag_state_sir"/>
+        <port name="usr_jtag_state_e1ir"/>
+        <port name="usr_jtag_state_pir"/>
+        <port name="usr_jtag_state_e2ir"/>
+        <port name="usr_jtag_state_uir"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_tdo"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_0_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_1_"/>
+        <port name="jtag.bp.SOPC_INST_mem_if_ddr2_emif_0_if_csr_m0_jtag_phy_embedded_in_jtag_master_normal.jtag_dc_streaming_jtag_streaming_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_2_"/>
+      </outputs>
+    </node>
+    <node hpath="sld_signaltap:auto_signaltap_0" instance_id="0" mfg_id="110" node_id="0" sld_node_info="0x30006E00" version="6">
+      <parameters>
+        <parameter name="lpm_type" type="string" value="sld_signaltap"/>
+        <parameter name="sld_node_info" type="unknown" value="805334528"/>
+        <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
+        <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
+        <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
+        <parameter name="sld_data_bits" type="unknown" value="96"/>
+        <parameter name="sld_trigger_bits" type="unknown" value="96"/>
+        <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
+        <parameter name="sld_node_crc_hiword" type="unknown" value="59021"/>
+        <parameter name="sld_node_crc_loword" type="unknown" value="47761"/>
+        <parameter name="SLD_INCREMENTAL_ROUTING" type="dec" value="0"/>
+        <parameter name="sld_sample_depth" type="unknown" value="128"/>
+        <parameter name="sld_segment_size" type="unknown" value="128"/>
+        <parameter name="sld_ram_block_type" type="unknown" value="M9K"/>
+        <parameter name="sld_state_bits" type="unknown" value="11"/>
+        <parameter name="sld_buffer_full_stop" type="unknown" value="1"/>
+        <parameter name="SLD_MEM_ADDRESS_BITS" type="dec" value="7"/>
+        <parameter name="SLD_DATA_BIT_CNTR_BITS" type="dec" value="4"/>
+        <parameter name="sld_trigger_level" type="unknown" value="1"/>
+        <parameter name="sld_trigger_in_enabled" type="unknown" value="0"/>
+        <parameter name="sld_advanced_trigger_entity" type="unknown" value="basic,1,"/>
+        <parameter name="sld_trigger_level_pipeline" type="unknown" value="1"/>
+        <parameter name="sld_enable_advanced_trigger" type="unknown" value="0"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_1" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_2" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_3" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_4" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_5" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_6" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_7" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_8" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_9" type="string" value="NONE"/>
+        <parameter name="SLD_ADVANCED_TRIGGER_10" type="string" value="NONE"/>
+        <parameter name="sld_inversion_mask_length" type="unknown" value="309"/>
+        <parameter name="sld_inversion_mask" type="unknown" value="000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+        <parameter name="sld_power_up_trigger" type="unknown" value="0"/>
+        <parameter name="SLD_STATE_FLOW_MGR_ENTITY" type="string" value="state_flow_mgr_entity.vhd"/>
+        <parameter name="sld_state_flow_use_generated" type="unknown" value="0"/>
+        <parameter name="sld_current_resource_width" type="unknown" value="1"/>
+        <parameter name="sld_attribute_mem_mode" type="unknown" value="OFF"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_BITS" type="dec" value="1"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_GAP_RECORD" type="dec" value="0"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_MODE" type="string" value="OFF"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION" type="dec" value="0"/>
+        <parameter name="sld_storage_qualifier_inversion_mask_length" type="unknown" value="0"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY" type="string" value="basic"/>
+        <parameter name="SLD_STORAGE_QUALIFIER_PIPELINE" type="dec" value="0"/>
+      </parameters>
+      <inputs/>
+      <outputs/>
+    </node>
+  </node_info>
+</sld_project_info>

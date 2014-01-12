@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ip>
+ <presets version="12.0">
+  <preset
+     name="DE4_HYNIX_H5PS"
+     kind="altera_mem_if_ddr2_emif"
+     version="12.0"
+     description="Hynix DDR spec">
+   <parameter name="CFG_REORDER_DATA" value="true" />
+   <parameter name="MEM_TRRD_NS" value="7.5" />
+   <parameter name="SOPC_COMPAT_RESET" value="false" />
+   <parameter name="MEM_TRP_NS" value="15.0" />
+   <parameter name="PHY_ONLY" value="false" />
+   <parameter name="CTL_CSR_CONNECTION" value="INTERNAL_JTAG" />
+   <parameter name="MEM_SRT" value="2x refresh rate" />
+   <parameter name="TIMING_TDSS" value="0.2" />
+   <parameter name="MEM_DRV_STR" value="Full" />
+   <parameter name="CFG_STARVE_LIMIT" value="10" />
+   <parameter name="TIMING_BOARD_MAX_DQS_DELAY" value="0.6" />
+   <parameter name="MEM_NUMBER_OF_RANKS_PER_DIMM" value="1" />
+   <parameter name="MEM_CLK_FREQ" value="250.0" />
+   <parameter name="MEM_TRAS_NS" value="40.0" />
+   <parameter name="MEM_TFAW_NS" value="37.5" />
+   <parameter name="MEM_TWR_NS" value="15.0" />
+   <parameter name="MEM_IF_DQSN_EN" value="true" />
+   <parameter name="MEM_ATCL" value="0" />
+   <parameter name="REF_CLK_FREQ" value="50.0" />
+   <parameter name="CTL_AUTOPCH_EN" value="false" />
+   <parameter name="ENABLE_ABS_RAM_MEM_INIT" value="false" />
+   <parameter name="ADVANCED_CK_PHASES" value="false" />
+   <parameter name="MEM_FORMAT" value="UNBUFFERED" />
+   <parameter name="ADDR_ORDER" value="0" />
+   <parameter name="TIMING_BOARD_SKEW_CKDQS_DIMM_MAX" value="0.01" />
+   <parameter name="TIMING_TDSH" value="0.2" />
+   <parameter name="CTL_SELF_REFRESH_EN" value="false" />
+   <parameter name="MEM_PD" value="Fast exit" />
+   <parameter name="CTL_CSR_ENABLED" value="true" />
+   <parameter name="MEM_TRTP_NS" value="7.5" />
+   <parameter name="TIMING_TIS" value="250" />
+   <parameter name="MEM_TRFC_NS" value="127.5" />
+   <parameter name="MEM_BANKADDR_WIDTH" value="3" />
+   <parameter name="MEM_TMRD_CK" value="2" />
+   <parameter name="MEM_VENDOR" value="Hynix" />
+   <parameter name="MEM_CK_WIDTH" value="2" />
+   <parameter name="DLL_SHARING_MODE" value="Master" />
+   <parameter name="TIMING_TDS" value="100" />
+   <parameter name="TIMING_TQHS" value="400" />
+   <parameter name="AVL_MAX_SIZE" value="4" />
+   <parameter name="CTL_LOOK_AHEAD_DEPTH" value="4" />
+   <parameter name="SKIP_MEM_INIT" value="true" />
+   <parameter name="MEM_TREFI_US" value="7.8" />
+   <parameter name="TIMING_BOARD_SKEW_CKDQS_DIMM_MIN" value="-0.01" />
+   <parameter name="MEM_TCL" value="4" />
+   <parameter name="TIMING_TDH" value="225" />
+   <parameter name="MEM_VERBOSE" value="true" />
+   <parameter name="TIMING_TDQSCK" value="450" />
+   <parameter name="MEM_DQ_PER_DQS" value="8" />
+   <parameter name="MEM_RTT_NOM" value="50" />
+   <parameter name="BYTE_ENABLE" value="true" />
+   <parameter name="MEM_DQ_WIDTH" value="64" />
+   <parameter name="TIMING_TDQSS" value="0.25" />
+   <parameter name="TIMING_TDQSQ" value="200" />
+   <parameter name="PLL_SHARING_MODE" value="Master" />
+   <parameter name="TIMING_TIH" value="375" />
+   <parameter name="ADD_EFFICIENCY_MONITOR" value="false" />
+   <parameter name="MEM_COL_ADDR_WIDTH" value="10" />
+   <parameter name="TIMING_TDQSH" value="0.35" />
+   <parameter name="TIMING_BOARD_MAX_CK_DELAY" value="0.6" />
+   <parameter name="MEM_TWTR" value="2" />
+   <parameter name="MEM_ROW_ADDR_WIDTH" value="14" />
+   <parameter name="TIMING_BOARD_AC_TO_CK_SKEW" value="0.6" />
+   <parameter name="RATE" value="Half" />
+   <parameter name="MEM_NUMBER_OF_DIMMS" value="1" />
+   <parameter name="TIMING_BOARD_DQ_TO_DQS_SKEW" value="0.0" />
+   <parameter name="POWER_OF_TWO_BUS" value="false" />
+   <parameter name="MEM_TRCD_NS" value="15.0" />
+   <parameter name="MEM_IF_DM_PINS_EN" value="true" />
+   <parameter name="NUM_DLL_SHARING_INTERFACES" value="1" />
+   <parameter name="CALIBRATION_MODE" value="Skip" />
+   <parameter name="CTL_USR_REFRESH_EN" value="false" />
+   <parameter name="HCX_COMPAT_MODE" value="false" />
+   <parameter name="MEM_BL" value="8" />
+   <parameter name="TIMING_BOARD_SKEW_BETWEEN_DQS" value="0.02" />
+   <parameter name="MEM_TINIT_US" value="200" />
+   <parameter name="MEM_CLK_FREQ_MAX" value="400.0" />
+   <parameter name="AUTO_POWERDN_EN" value="false" />
+   <parameter name="TIMING_BOARD_SKEW_WITHIN_DQS" value="0.02" />
+   <parameter name="TIMING_BOARD_ISI_METHOD" value="AUTO" />
+   <parameter name="OCT_SHARING_MODE" value="None" />
+   <parameter name="AC_PARITY" value="false" />
+   <parameter name="TIMING_BOARD_AC_SKEW" value="0.02" />
+   <parameter name="MEM_BT" value="Sequential" />
+   <parameter name="NUM_PLL_SHARING_INTERFACES" value="1" />
+   <parameter name="USER_DEBUG_LEVEL" value="1" />
+   <parameter name="TIMING_BOARD_DERATE_METHOD" value="AUTO" />
+   <parameter name="SPEED_GRADE" value="2" />
+   <parameter name="CTL_ECC_ENABLED" value="false" />
+  </preset>
+ </presets>
+</ip>

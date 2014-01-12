@@ -1,0 +1,11 @@
+INTENDED_DEVICE_FAMILY="Stratix IV"
+PIPELINE=1
+WIDTH_EXP=8
+WIDTH_MAN=23
+DEVICE_FAMILY="Stratix IV"
+clk_en
+clock
+dataa
+datab
+ageb
+aleb

@@ -1,0 +1,75 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 0 0 224 160)
+	(text "float_mult" (rect 80 0 159 17)(font "Dialog" (font_size 10)))
+	(text "inst" (rect 8 145 26 156)(font "Arial" ))
+	(port
+		(pt 0 48)
+		(input)
+		(text "dataa[31..0]" (rect 0 0 80 13)(font "Dialog" (font_size 8)))
+		(text "dataa[31..0]" (rect 4 35 73 47)(font "Dialog" (font_size 8)))
+		(line (pt 0 48)(pt 80 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "datab[31..0]" (rect 0 0 80 13)(font "Dialog" (font_size 8)))
+		(text "datab[31..0]" (rect 4 51 73 63)(font "Dialog" (font_size 8)))
+		(line (pt 0 64)(pt 80 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clock" (rect 0 0 35 13)(font "Dialog" (font_size 8)))
+		(text "clock" (rect 4 67 36 79)(font "Dialog" (font_size 8)))
+		(line (pt 0 80)(pt 80 80))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "result[31..0]" (rect 0 0 79 13)(font "Dialog" (font_size 8)))
+		(text "result[31..0]" (rect 151 35 219 47)(font "Dialog" (font_size 8)))
+		(line (pt 224 48)(pt 144 48)(line_width 3))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "overflow" (rect 0 0 56 13)(font "Dialog" (font_size 8)))
+		(text "overflow" (rect 173 51 222 63)(font "Dialog" (font_size 8)))
+		(line (pt 224 64)(pt 144 64))
+	)
+	(drawing
+		(text "Clock cycles: 5" (rect 151 98 369 206)(font "Arial" ))
+		(text "Single Precision" (rect 145 114 358 238)(font "Arial" ))
+		(text "Exponent Width: 8" (rect 138 130 355 270)(font "Arial" ))
+		(text "Mantissa Width: 23" (rect 134 146 351 302)(font "Arial" ))
+		(line (pt 80 32)(pt 144 32))
+		(line (pt 144 32)(pt 144 96))
+		(line (pt 80 96)(pt 144 96))
+		(line (pt 80 32)(pt 80 96))
+		(line (pt 0 0)(pt 224 0))
+		(line (pt 224 0)(pt 224 160))
+		(line (pt 0 160)(pt 224 160))
+		(line (pt 0 0)(pt 0 160))
+	)
+)

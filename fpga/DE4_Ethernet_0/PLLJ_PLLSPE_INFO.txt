@@ -1,0 +1,20 @@
+PLL_Name	DE4_SOPC:SOPC_INST|DE4_SOPC_mem_if_ddr2_emif_0:mem_if_ddr2_emif_0|DE4_SOPC_mem_if_ddr2_emif_0_pll0:pll0|altpll:upll_memphy|altpll_fvc3:auto_generated|pll1
+PLLJITTER	35
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	DE4_SOPC:SOPC_INST|DE4_SOPC_pll:pll|altpllDE4_SOPC_pll:the_pll|altpll:altpll_component|altpll_gnf2:auto_generated|pll1
+PLLJITTER	28
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	DE4_SOPC:SOPC_INST|DE4_SOPC_tse_mac:tse_mac1|altera_tse_mac_pcs_pma:altera_tse_mac_pcs_pma_inst|altera_tse_pma_lvds_rx:the_altera_tse_pma_lvds_rx|altlvds_rx:ALTLVDS_RX_component|lvds_rx_osv3:auto_generated|pll
+PLLJITTER	29
+PLLSPEmax	40
+PLLSPEmin	-40
+
+PLL_Name	pll_125:pll_125_ins|altpll:altpll_component|pll_125_altpll:auto_generated|pll1
+PLLJITTER	26
+PLLSPEmax	40
+PLLSPEmin	-40
+

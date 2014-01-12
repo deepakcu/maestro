@@ -1,0 +1,1418 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Stratix IV"
+set_global_assignment -name DEVICE EP4SGX230KF40C2
+set_global_assignment -name TOP_LEVEL_ENTITY "DE4_Ethernet"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name LAST_QUARTUS_VERSION 12.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:30:05 MAY 24,2010"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FPGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 1152
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 2
+set_location_assignment PIN_AF25 -to termination_blk0~_rup_pad
+set_location_assignment PIN_AG25 -to termination_blk0~_rdn_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk0~_rup_pad
+set_instance_assignment -name IO_STANDARD "1.8 V" -to termination_blk0~_run_pad
+
+#============================================================
+# CLOCK
+#============================================================
+set_location_assignment PIN_AC35 -to OSC_50_BANK2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK2
+set_location_assignment PIN_AV22 -to OSC_50_BANK3
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_50_BANK3
+set_location_assignment PIN_AV19 -to OSC_50_BANK4
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_50_BANK4
+set_location_assignment PIN_AC6 -to OSC_50_BANK5
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to OSC_50_BANK5
+set_location_assignment PIN_AB6 -to OSC_50_BANK6
+set_instance_assignment -name IO_STANDARD "2.5 V" -to OSC_50_BANK6
+set_location_assignment PIN_A19 -to OSC_50_BANK7
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_50_BANK7
+set_location_assignment PIN_AH19 -to GCLKOUT_FPGA
+set_instance_assignment -name IO_STANDARD "1.8 V" -to GCLKOUT_FPGA
+set_location_assignment PIN_A21 -to GCLKIN
+set_instance_assignment -name IO_STANDARD "1.8 V" -to GCLKIN
+set_location_assignment PIN_B22 -to PLL_CLKIN_p
+set_instance_assignment -name IO_STANDARD LVDS -to PLL_CLKIN_p
+
+#============================================================
+# External PLL
+#============================================================
+set_location_assignment PIN_AP24 -to MAX_I2C_SCLK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to MAX_I2C_SCLK
+set_location_assignment PIN_AN22 -to MAX_I2C_SDAT
+set_instance_assignment -name IO_STANDARD "1.8 V" -to MAX_I2C_SDAT
+
+#============================================================
+# LED x 8
+#============================================================
+set_location_assignment PIN_V28 -to LED[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[0]
+set_location_assignment PIN_W28 -to LED[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[1]
+set_location_assignment PIN_R29 -to LED[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[2]
+set_location_assignment PIN_P29 -to LED[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[3]
+set_location_assignment PIN_N29 -to LED[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[4]
+set_location_assignment PIN_M29 -to LED[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[5]
+set_location_assignment PIN_M30 -to LED[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[6]
+set_location_assignment PIN_N30 -to LED[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to LED[7]
+
+#============================================================
+# BUTTON x 4, EXT_IO and CPU_RESET_n
+#============================================================
+set_location_assignment PIN_AH5 -to BUTTON[0]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[0]
+set_location_assignment PIN_AG5 -to BUTTON[1]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[1]
+set_location_assignment PIN_AG7 -to BUTTON[2]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[2]
+set_location_assignment PIN_AG8 -to BUTTON[3]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to BUTTON[3]
+set_location_assignment PIN_AC11 -to EXT_IO
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to EXT_IO
+set_location_assignment PIN_V34 -to CPU_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to CPU_RESET_n
+
+#============================================================
+# DIP SWITCH x 8
+#============================================================
+set_location_assignment PIN_AB13 -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[0]
+set_location_assignment PIN_AB12 -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[1]
+set_location_assignment PIN_AB11 -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[2]
+set_location_assignment PIN_AB10 -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[3]
+set_location_assignment PIN_AB9 -to SW[4]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[4]
+set_location_assignment PIN_AC8 -to SW[5]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[5]
+set_location_assignment PIN_AH6 -to SW[6]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[6]
+set_location_assignment PIN_AG6 -to SW[7]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SW[7]
+
+#============================================================
+# SLIDE SWITCH x 4
+#============================================================
+set_location_assignment PIN_J7 -to SLIDE_SW[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SLIDE_SW[0]
+set_location_assignment PIN_K7 -to SLIDE_SW[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SLIDE_SW[1]
+set_location_assignment PIN_AK6 -to SLIDE_SW[2]
+set_instance_assignment -name IO_STANDARD "3.0-V PCI-X" -to SLIDE_SW[2]
+set_location_assignment PIN_L7 -to SLIDE_SW[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SLIDE_SW[3]
+
+#============================================================
+# SEG7
+#============================================================
+set_location_assignment PIN_L34 -to SEG0_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[0]
+set_location_assignment PIN_M34 -to SEG0_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[1]
+set_location_assignment PIN_M33 -to SEG0_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[2]
+set_location_assignment PIN_H31 -to SEG0_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[3]
+set_location_assignment PIN_J33 -to SEG0_D[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[4]
+set_location_assignment PIN_L35 -to SEG0_D[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[5]
+set_location_assignment PIN_K32 -to SEG0_D[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_D[6]
+set_location_assignment PIN_AL34 -to SEG0_DP
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG0_DP
+set_location_assignment PIN_E31 -to SEG1_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[0]
+set_location_assignment PIN_F31 -to SEG1_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[1]
+set_location_assignment PIN_G31 -to SEG1_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[2]
+set_location_assignment PIN_C34 -to SEG1_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[3]
+set_location_assignment PIN_C33 -to SEG1_D[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[4]
+set_location_assignment PIN_D33 -to SEG1_D[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[5]
+set_location_assignment PIN_D34 -to SEG1_D[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_D[6]
+set_location_assignment PIN_AL35 -to SEG1_DP
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SEG1_DP
+
+#============================================================
+# Temperature
+#============================================================
+set_location_assignment PIN_AN18 -to TEMP_SMCLK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to TEMP_SMCLK
+set_location_assignment PIN_AP18 -to TEMP_SMDAT
+set_instance_assignment -name IO_STANDARD "1.8 V" -to TEMP_SMDAT
+set_location_assignment PIN_AP19 -to TEMP_INT_n
+set_instance_assignment -name IO_STANDARD "1.8 V" -to TEMP_INT_n
+
+#============================================================
+# Current
+#============================================================
+set_location_assignment PIN_AH13 -to CSENSE_SCK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_SCK
+set_location_assignment PIN_AJ13 -to CSENSE_SDI
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_SDI
+set_location_assignment PIN_AK14 -to CSENSE_SDO
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_SDO
+set_location_assignment PIN_AK13 -to CSENSE_ADC_FO
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_ADC_FO
+set_location_assignment PIN_AG14 -to CSENSE_CS_n[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_CS_n[0]
+set_location_assignment PIN_AG15 -to CSENSE_CS_n[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to CSENSE_CS_n[1]
+
+#============================================================
+# Fan
+#============================================================
+set_location_assignment PIN_AP20 -to FAN_CTRL
+set_instance_assignment -name IO_STANDARD "1.8 V" -to FAN_CTRL
+
+#============================================================
+# EEPROM
+#============================================================
+set_location_assignment PIN_G33 -to EEP_SCL
+set_instance_assignment -name IO_STANDARD "2.5 V" -to EEP_SCL
+set_location_assignment PIN_F33 -to EEP_SDA
+set_instance_assignment -name IO_STANDARD "2.5 V" -to EEP_SDA
+
+#============================================================
+# SDCARD
+#============================================================
+set_location_assignment PIN_AV20 -to SD_CMD
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CMD
+set_location_assignment PIN_AT19 -to SD_CLK
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK
+set_location_assignment PIN_AH18 -to SD_WP_n
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_WP_n
+set_location_assignment PIN_AR20 -to SD_DAT[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[0]
+set_location_assignment PIN_AT20 -to SD_DAT[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[1]
+set_location_assignment PIN_AU19 -to SD_DAT[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2]
+set_location_assignment PIN_AU20 -to SD_DAT[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3]
+
+#============================================================
+# RS232
+#============================================================
+set_location_assignment PIN_AH32 -to UART_RXD
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_RXD
+set_location_assignment PIN_AH33 -to UART_RTS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_RTS
+set_location_assignment PIN_AN34 -to UART_TXD
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_TXD
+set_location_assignment PIN_AN35 -to UART_CTS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to UART_CTS
+
+#============================================================
+# Ethernet x 4
+#============================================================
+set_location_assignment PIN_U31 -to ETH_RX_p[0]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[0]
+set_location_assignment PIN_T30 -to ETH_TX_p[0]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[0]
+set_location_assignment PIN_W32 -to ETH_MDIO[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[0]
+set_location_assignment PIN_R30 -to ETH_MDC[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[0]
+set_location_assignment PIN_B20 -to ETH_INT_n[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to ETH_INT_n[0]
+set_location_assignment PIN_N33 -to ETH_RX_p[1]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[1]
+set_location_assignment PIN_R32 -to ETH_TX_p[1]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[1]
+set_location_assignment PIN_J5 -to ETH_MDIO[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[1]
+set_location_assignment PIN_J6 -to ETH_MDC[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[1]
+set_location_assignment PIN_AG30 -to ETH_INT_n[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_INT_n[1]
+set_location_assignment PIN_K34 -to ETH_RX_p[2]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[2]
+set_location_assignment PIN_M32 -to ETH_TX_p[2]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[2]
+set_location_assignment PIN_K5 -to ETH_MDIO[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[2]
+set_location_assignment PIN_K6 -to ETH_MDC[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[2]
+set_location_assignment PIN_AE30 -to ETH_INT_n[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_INT_n[2]
+set_location_assignment PIN_J34 -to ETH_RX_p[3]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_RX_p[3]
+set_location_assignment PIN_P31 -to ETH_TX_p[3]
+set_instance_assignment -name IO_STANDARD LVDS -to ETH_TX_p[3]
+set_location_assignment PIN_N8 -to ETH_MDIO[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDIO[3]
+set_location_assignment PIN_N7 -to ETH_MDC[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_MDC[3]
+set_location_assignment PIN_AE31 -to ETH_INT_n[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_INT_n[3]
+set_location_assignment PIN_V29 -to ETH_RST_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ETH_RST_n
+
+#============================================================
+# Flash and SRAM Address/Data Share Bus
+#============================================================
+set_location_assignment PIN_K29 -to FSM_D[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[0]
+set_location_assignment PIN_J30 -to FSM_D[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[1]
+set_location_assignment PIN_K30 -to FSM_D[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[2]
+set_location_assignment PIN_L29 -to FSM_D[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[3]
+set_location_assignment PIN_K31 -to FSM_D[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[4]
+set_location_assignment PIN_E32 -to FSM_D[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[5]
+set_location_assignment PIN_F32 -to FSM_D[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[6]
+set_location_assignment PIN_H32 -to FSM_D[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[7]
+set_location_assignment PIN_B32 -to FSM_D[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[8]
+set_location_assignment PIN_C32 -to FSM_D[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[9]
+set_location_assignment PIN_C35 -to FSM_D[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[10]
+set_location_assignment PIN_D35 -to FSM_D[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[11]
+set_location_assignment PIN_M22 -to FSM_D[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[12]
+set_location_assignment PIN_M28 -to FSM_D[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[13]
+set_location_assignment PIN_C31 -to FSM_D[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[14]
+set_location_assignment PIN_D31 -to FSM_D[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_D[15]
+set_location_assignment PIN_G22 -to FSM_A[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[1]
+set_location_assignment PIN_G23 -to FSM_A[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[2]
+set_location_assignment PIN_A25 -to FSM_A[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[3]
+set_location_assignment PIN_H22 -to FSM_A[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[4]
+set_location_assignment PIN_H23 -to FSM_A[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[5]
+set_location_assignment PIN_J22 -to FSM_A[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[6]
+set_location_assignment PIN_K22 -to FSM_A[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[7]
+set_location_assignment PIN_M21 -to FSM_A[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[8]
+set_location_assignment PIN_J23 -to FSM_A[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[9]
+set_location_assignment PIN_F34 -to FSM_A[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[10]
+set_location_assignment PIN_G35 -to FSM_A[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[11]
+set_location_assignment PIN_E34 -to FSM_A[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[12]
+set_location_assignment PIN_J32 -to FSM_A[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[13]
+set_location_assignment PIN_F35 -to FSM_A[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[14]
+set_location_assignment PIN_C24 -to FSM_A[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[15]
+set_location_assignment PIN_A24 -to FSM_A[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[16]
+set_location_assignment PIN_D23 -to FSM_A[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[17]
+set_location_assignment PIN_D24 -to FSM_A[18]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[18]
+set_location_assignment PIN_T27 -to FSM_A[19]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[19]
+set_location_assignment PIN_T28 -to FSM_A[20]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[20]
+set_location_assignment PIN_D22 -to FSM_A[21]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[21]
+set_location_assignment PIN_E23 -to FSM_A[22]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[22]
+set_location_assignment PIN_N20 -to FSM_A[23]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[23]
+set_location_assignment PIN_P20 -to FSM_A[24]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[24]
+set_location_assignment PIN_C22 -to FSM_A[25]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FSM_A[25]
+
+#============================================================
+# Flash Control
+#============================================================
+set_location_assignment PIN_G21 -to FLASH_RYBY_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_RYBY_n
+set_location_assignment PIN_E22 -to FLASH_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_CLK
+set_location_assignment PIN_D21 -to FLASH_RESET_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_RESET_n
+set_location_assignment PIN_N21 -to FLASH_OE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_OE_n
+set_location_assignment PIN_R20 -to FLASH_WE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_WE_n
+set_location_assignment PIN_F21 -to FLASH_ADV_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_ADV_n
+set_location_assignment PIN_F23 -to FLASH_CE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to FLASH_CE_n
+
+#============================================================
+# SSRAM Control
+#============================================================
+set_location_assignment PIN_R27 -to SSRAM_BWA_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_BWA_n
+set_location_assignment PIN_N31 -to SSRAM_BWB_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_BWB_n
+set_location_assignment PIN_M31 -to SSRAM_CLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_CLK
+set_location_assignment PIN_H34 -to SSRAM_OE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_OE_n
+set_location_assignment PIN_L31 -to SSRAM_WE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_WE_n
+set_location_assignment PIN_N28 -to SSRAM_CKE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_CKE_n
+set_location_assignment PIN_R28 -to SSRAM_CE_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_CE_n
+set_location_assignment PIN_H35 -to SSRAM_ADV
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SSRAM_ADV
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name GLOBAL_SIGNAL ON -to ref_clk
+set_instance_assignment -name IO_STANDARD LVDS -to ref_clk
+set_instance_assignment -name IO_STANDARD LVDS -to txp
+set_instance_assignment -name IO_STANDARD LVDS -to rxp
+set_instance_assignment -name VIRTUAL_PIN ON -to FSM_A[0]
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+
+#set_global_assignment -name VERILOG_FILE src/EXT_PLL_CTRL.v
+
+
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+
+
+#DDR2 location assignments Deepak
+set_location_assignment PIN_AW34 -to M1_DDR2_dq[4]
+set_location_assignment PIN_AV32 -to M1_DDR2_dq[0]
+set_location_assignment PIN_AW33 -to M1_DDR2_dq[5]
+set_location_assignment PIN_AV31 -to M1_DDR2_dq[1]
+set_location_assignment PIN_AW31 -to M1_DDR2_dm[0]
+set_location_assignment PIN_AW30 -to M1_DDR2_dqsn[0]
+set_location_assignment PIN_AV29 -to M1_DDR2_dqs[0]
+set_location_assignment PIN_AW28 -to M1_DDR2_dq[6]
+set_location_assignment PIN_AW27 -to M1_DDR2_dq[7]
+set_location_assignment PIN_AW29 -to M1_DDR2_dq[2]
+set_location_assignment PIN_AV28 -to M1_DDR2_dq[3]
+set_location_assignment PIN_AM25 -to M1_DDR2_dq[12]
+set_location_assignment PIN_AN25 -to M1_DDR2_dq[13]
+set_location_assignment PIN_AP25 -to M1_DDR2_dq[8]
+set_location_assignment PIN_AV26 -to M1_DDR2_dq[9]
+set_location_assignment PIN_AW26 -to M1_DDR2_dm[1]
+set_location_assignment PIN_AU26 -to M1_DDR2_dqsn[1]
+set_location_assignment PIN_AP28 -to M1_DDR2_clk[0]
+set_location_assignment PIN_AT26 -to M1_DDR2_dqs[1]
+set_location_assignment PIN_AR28 -to M1_DDR2_clk_n[0]
+set_location_assignment PIN_AU25 -to M1_DDR2_dq[10]
+set_location_assignment PIN_AR25 -to M1_DDR2_dq[14]
+set_location_assignment PIN_AT25 -to M1_DDR2_dq[11]
+set_location_assignment PIN_AN24 -to M1_DDR2_dq[15]
+set_location_assignment PIN_AN23 -to M1_DDR2_dq[16]
+set_location_assignment PIN_AM23 -to M1_DDR2_dq[20]
+set_location_assignment PIN_AP23 -to M1_DDR2_dq[17]
+set_location_assignment PIN_AR23 -to M1_DDR2_dq[21]
+set_location_assignment PIN_AU24 -to M1_DDR2_dqsn[2]
+set_location_assignment PIN_AT24 -to M1_DDR2_dqs[2]
+set_location_assignment PIN_AU23 -to M1_DDR2_dm[2]
+set_location_assignment PIN_AL22 -to M1_DDR2_dq[18]
+set_location_assignment PIN_AT23 -to M1_DDR2_dq[22]
+set_location_assignment PIN_AM22 -to M1_DDR2_dq[19]
+set_location_assignment PIN_AL21 -to M1_DDR2_dq[23]
+set_location_assignment PIN_AJ22 -to M1_DDR2_dq[24]
+set_location_assignment PIN_AK24 -to M1_DDR2_dq[28]
+set_location_assignment PIN_AH23 -to M1_DDR2_dq[25]
+set_location_assignment PIN_AJ23 -to M1_DDR2_dq[29]
+set_location_assignment PIN_AH22 -to M1_DDR2_dm[3]
+set_location_assignment PIN_AL23 -to M1_DDR2_dqsn[3]
+set_location_assignment PIN_AK23 -to M1_DDR2_dqs[3]
+set_location_assignment PIN_AF22 -to M1_DDR2_dq[26]
+set_location_assignment PIN_AF23 -to M1_DDR2_dq[30]
+set_location_assignment PIN_AE23 -to M1_DDR2_dq[27]
+set_location_assignment PIN_AE22 -to M1_DDR2_dq[31]
+set_location_assignment PIN_AT28 -to M1_DDR2_cke[0]
+set_location_assignment PIN_AK27 -to M1_DDR2_cke[1]
+set_location_assignment PIN_AP27 -to M1_DDR2_ba[2]
+set_location_assignment PIN_AP26 -to M1_DDR2_addr[12]
+set_location_assignment PIN_AU28 -to M1_DDR2_addr[11]
+set_location_assignment PIN_AN27 -to M1_DDR2_addr[9]
+set_location_assignment PIN_AT27 -to M1_DDR2_addr[7]
+set_location_assignment PIN_AL27 -to M1_DDR2_addr[8]
+set_location_assignment PIN_AU27 -to M1_DDR2_addr[6]
+set_location_assignment PIN_AK26 -to M1_DDR2_addr[5]
+set_location_assignment PIN_AN26 -to M1_DDR2_addr[4]
+set_location_assignment PIN_AM26 -to M1_DDR2_addr[3]
+set_location_assignment PIN_AW23 -to M1_DDR2_addr[2]
+set_location_assignment PIN_AL25 -to M1_DDR2_addr[1]
+set_location_assignment PIN_AV23 -to M1_DDR2_addr[0]
+set_location_assignment PIN_AJ26 -to M1_DDR2_addr[10]
+set_location_assignment PIN_AD25 -to M1_DDR2_ba[1]
+set_location_assignment PIN_AH26 -to M1_DDR2_ba[0]
+set_location_assignment PIN_AE21 -to M1_DDR2_ras_n
+set_location_assignment PIN_AK25 -to M1_DDR2_we_n
+set_location_assignment PIN_AG21 -to M1_DDR2_cs_n[0]
+set_location_assignment PIN_AJ25 -to M1_DDR2_cas_n
+set_location_assignment PIN_AG20 -to M1_DDR2_odt[0]
+set_location_assignment PIN_AE25 -to M1_DDR2_cs_n[1]
+set_location_assignment PIN_AD21 -to M1_DDR2_addr[13]
+set_location_assignment PIN_AE24 -to M1_DDR2_odt[1]
+set_location_assignment PIN_AK17 -to M1_DDR2_dq[32]
+set_location_assignment PIN_AG16 -to M1_DDR2_dq[36]
+set_location_assignment PIN_AM17 -to M1_DDR2_dq[33]
+set_location_assignment PIN_AH17 -to M1_DDR2_dq[37]
+set_location_assignment PIN_AL16 -to M1_DDR2_dqsn[4]
+set_location_assignment PIN_AL17 -to M1_DDR2_dm[4]
+set_location_assignment PIN_AK16 -to M1_DDR2_dqs[4]
+set_location_assignment PIN_AF17 -to M1_DDR2_dq[38]
+set_location_assignment PIN_AH16 -to M1_DDR2_dq[34]
+set_location_assignment PIN_AE17 -to M1_DDR2_dq[39]
+set_location_assignment PIN_AJ16 -to M1_DDR2_dq[35]
+set_location_assignment PIN_AN17 -to M1_DDR2_dq[44]
+set_location_assignment PIN_AR17 -to M1_DDR2_dq[40]
+set_location_assignment PIN_AP17 -to M1_DDR2_dq[45]
+set_location_assignment PIN_AN16 -to M1_DDR2_dq[41]
+set_location_assignment PIN_AR16 -to M1_DDR2_dqsn[5]
+set_location_assignment PIN_AT16 -to M1_DDR2_dm[5]
+set_location_assignment PIN_AP16 -to M1_DDR2_dqs[5]
+set_location_assignment PIN_AU16 -to M1_DDR2_dq[42]
+set_location_assignment PIN_AU15 -to M1_DDR2_dq[46]
+set_location_assignment PIN_AW16 -to M1_DDR2_dq[43]
+set_location_assignment PIN_AT15 -to M1_DDR2_dq[47]
+set_location_assignment PIN_AW11 -to M1_DDR2_dq[48]
+set_location_assignment PIN_AW14 -to M1_DDR2_dq[52]
+set_location_assignment PIN_AW12 -to M1_DDR2_dq[49]
+set_location_assignment PIN_AV14 -to M1_DDR2_dq[53]
+set_location_assignment PIN_AE20 -to M1_DDR2_clk[1]
+set_location_assignment PIN_AF20 -to M1_DDR2_clk_n[1]
+set_location_assignment PIN_AW13 -to M1_DDR2_dqsn[6]
+set_location_assignment PIN_AV13 -to M1_DDR2_dqs[6]
+set_location_assignment PIN_AU14 -to M1_DDR2_dm[6]
+set_location_assignment PIN_AT14 -to M1_DDR2_dq[50]
+set_location_assignment PIN_AU11 -to M1_DDR2_dq[54]
+set_location_assignment PIN_AU12 -to M1_DDR2_dq[51]
+set_location_assignment PIN_AT12 -to M1_DDR2_dq[55]
+set_location_assignment PIN_AP13 -to M1_DDR2_dq[56]
+set_location_assignment PIN_AR14 -to M1_DDR2_dq[60]
+set_location_assignment PIN_AN14 -to M1_DDR2_dq[57]
+set_location_assignment PIN_AP14 -to M1_DDR2_dq[61]
+set_location_assignment PIN_AN13 -to M1_DDR2_dm[7]
+set_location_assignment PIN_AT13 -to M1_DDR2_dqsn[7]
+set_location_assignment PIN_AR13 -to M1_DDR2_dqs[7]
+set_location_assignment PIN_AL15 -to M1_DDR2_dq[58]
+set_location_assignment PIN_AM14 -to M1_DDR2_dq[59]
+set_location_assignment PIN_AL14 -to M1_DDR2_dq[62]
+set_location_assignment PIN_AL13 -to M1_DDR2_dq[63]
+set_location_assignment PIN_AG24 -to M1_DDR2_SDA
+set_location_assignment PIN_AH24 -to M1_DDR2_SCL
+set_location_assignment PIN_AV25 -to M1_DDR2_SA[0]
+set_location_assignment PIN_AW25 -to M1_DDR2_SA[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_RDN
+set_location_assignment PIN_AG25 -to M1_DDR2_RDN
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_RUP
+set_location_assignment PIN_AF25 -to M1_DDR2_RUP
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name MISC_FILE "D:/NIOS_ddr2/de4_ddr2.dpf"
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_odt
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_cs_n
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_cke
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_SA
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_SDA
+set_instance_assignment -name IO_STANDARD "1.8 V" -to M1_DDR2_SCL
+
+
+
+
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[14] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[14] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[14] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[15] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[15] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[15] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[16] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[16] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[16] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[17] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[17] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[17] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[18] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[18] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[18] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[19] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[19] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[19] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[20] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[20] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[20] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[21] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[21] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[21] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[22] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[22] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[22] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[23] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[23] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[23] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[24] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[24] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[24] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[25] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[25] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[25] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[26] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[26] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[26] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[27] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[27] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[27] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[28] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[28] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[28] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[29] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[29] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[29] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[30] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[30] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[30] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[31] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[31] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[31] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[32] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[32] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[32] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[33] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[33] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[33] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[34] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[34] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[34] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[35] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[35] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[35] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[36] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[36] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[36] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[37] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[37] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[37] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[38] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[38] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[38] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[39] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[39] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[39] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[40] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[40] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[40] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[41] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[41] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[41] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[42] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[42] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[42] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[43] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[43] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[43] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[44] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[44] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[44] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[45] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[45] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[45] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[46] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[46] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[46] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[47] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[47] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[47] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[48] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[48] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[48] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[49] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[49] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[49] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[50] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[50] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[50] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[51] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[51] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[51] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[52] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[52] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[52] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[53] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[53] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[53] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[54] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[54] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[54] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[55] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[55] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[55] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[56] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[56] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[56] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[57] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[57] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[57] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[58] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[58] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[58] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[59] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[59] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[59] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[60] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[60] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[60] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[61] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[61] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[61] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[62] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[62] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[62] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dq[63] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[63] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dq[63] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqs[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqs[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_dqsn[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dqsn[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_clk[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to M1_DDR2_clk[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_clk[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to M1_DDR2_clk[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_clk_n[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to M1_DDR2_clk_n[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V SSTL CLASS I" -to M1_DDR2_clk_n[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to M1_DDR2_clk_n[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_addr[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_addr[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_ba[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_ba[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_ba[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_ba[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_ba[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_ba[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_cs_n[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_cs_n[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_we_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_we_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_ras_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_ras_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_cas_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_cas_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_odt[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_odt[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_cke[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to M1_DDR2_cke[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to M1_DDR2_dm[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to M1_DDR2_dm[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dq[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[14] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dq[15] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[16] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[17] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[18] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[19] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[20] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[21] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[22] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dq[23] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[24] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[25] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[26] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[27] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[28] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[29] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[30] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dq[31] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[32] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[33] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[34] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[35] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[36] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[37] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[38] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dq[39] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[40] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[41] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[42] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[43] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[44] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[45] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[46] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dq[47] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[48] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[49] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[50] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[51] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[52] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[53] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[54] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dq[55] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[56] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[57] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[58] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[59] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[60] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[61] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[62] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dq[63] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[0] -to M1_DDR2_dm[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[1] -to M1_DDR2_dm[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[2] -to M1_DDR2_dm[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[3] -to M1_DDR2_dm[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[4] -to M1_DDR2_dm[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[5] -to M1_DDR2_dm[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[6] -to M1_DDR2_dm[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name DQ_GROUP 9 -from M1_DDR2_dqs[7] -to M1_DDR2_dm[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[8] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[9] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[10] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[11] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[12] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[13] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[14] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[15] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[16] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[17] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[18] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[19] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[20] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[21] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[22] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[23] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[24] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[25] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[26] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[27] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[28] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[29] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[30] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[31] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[32] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[33] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[34] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[35] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[36] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[37] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[38] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[39] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[40] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[41] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[42] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[43] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[44] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[45] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[46] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[47] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[48] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[49] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[50] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[51] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[52] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[53] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[54] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[55] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[56] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[57] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[58] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[59] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[60] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[61] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[62] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dq[63] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dm[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqs[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to M1_DDR2_dqsn[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|clk[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|clk[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|clk[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|clk[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL "DUAL-REGIONAL CLOCK" -to SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|clk[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|ureset|phy_reset_mem_stable_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|ureset|phy_reset_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|s0|sequencer_rw_mgr_inst|rw_mgr_inst|rw_mgr_core_inst|rw_soft_reset_n -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_write_side[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[0] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[1] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[2] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[3] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[4] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[5] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[6] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to SOPC_INST|mem_if_ddr2_emif_0|p0|umemphy|uread_datapath|read_capture_clk_div2[7] -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -from SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|clk[2] -to SOPC_INST|mem_if_ddr2_emif_0|dll0|dll_wys_m -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to SOPC_INST|mem_if_ddr2_emif_0 -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_instance_assignment -name PLL_ENFORCE_USER_PHASE_SHIFT ON -to SOPC_INST|mem_if_ddr2_emif_0|pll0|upll_memphy|auto_generated|pll1 -tag __DE4_SOPC_mem_if_ddr2_emif_0_p0
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name UNIPHY_TEMP_VER_CODE 303177710
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+
+set_global_assignment -name MISC_FILE /home/deepak/Desktop/test_terasic_ethernet_netfpga_compute_dram/DE4_Ethernet_0/DE4_Ethernet.dpf
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE src/stp1.stp
+set_global_assignment -name SMART_RECOMPILE ON
+
+set_global_assignment -name RAPID_RECOMPILE_MODE OFF
+set_global_assignment -name VERILOG_FILE txfifo_packet_composer.v
+set_global_assignment -name SYSTEMVERILOG_FILE fifo_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE processor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE snooper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE update_accum_pr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE coherence_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE collector.sv
+set_global_assignment -name SYSTEMVERILOG_FILE snoopy_bus_arbiter.sv
+set_global_assignment -name VERILOG_FILE record_writer.v
+set_global_assignment -name VERILOG_FILE record_reader.v
+set_global_assignment -name VERILOG_FILE record_operator.v
+set_global_assignment -name QIP_FILE DE4_SOPC/synthesis/DE4_SOPC.qip
+set_global_assignment -name VERILOG_FILE DE4_SOPC/synthesis/DE4_SOPC.v -library lib_DE4_SOPC
+set_global_assignment -name QIP_FILE altpllpll.qip
+set_global_assignment -name SOURCE_FILE DE4_Ethernet.qpf
+set_global_assignment -name SOURCE_FILE DE4_Ethernet.qsf
+set_global_assignment -name VERILOG_FILE accumulator.v
+set_global_assignment -name SYSTEMVERILOG_FILE compute_system.sv
+set_global_assignment -name SYSTEMVERILOG_FILE compute_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top_k_fill.sv
+set_global_assignment -name SYSTEMVERILOG_FILE update_pr.sv
+set_global_assignment -name VERILOG_FILE mutex.v
+set_global_assignment -name VERILOG_FILE float_mega/float_cmp/float_cmp.v
+set_global_assignment -name VERILOG_FILE term_check.v
+set_global_assignment -name VERILOG_FILE float_mega/float_add_sub/float_add_sub.v
+set_global_assignment -name VERILOG_FILE float_mega/float_mult/float_mult.v
+set_global_assignment -name VERILOG_FILE top_k_fill.v
+set_global_assignment -name VERILOG_FILE update.v
+set_global_assignment -name VERILOG_FILE ext_pll_ctrl.v
+set_global_assignment -name SDC_FILE DE4_Ethernet.SDC
+set_global_assignment -name VERILOG_FILE src/NF_2.1_defines.v
+set_global_assignment -name VERILOG_FILE src/reg_defines_reference_router.v
+set_global_assignment -name VERILOG_FILE src/udp_defines.v
+set_global_assignment -name VERILOG_FILE src/registers.v
+set_global_assignment -name VERILOG_FILE src/cam.v
+set_global_assignment -name VERILOG_FILE src/decoder.v
+set_global_assignment -name VERILOG_FILE src/dpram.v
+set_global_assignment -name VERILOG_FILE src/erase_keys.v
+set_global_assignment -name VERILOG_FILE src/erase_ram.v
+set_global_assignment -name VERILOG_FILE src/multi_bit_check.v
+set_global_assignment -name VERILOG_FILE src/prior_enc.v
+set_global_assignment -name VERILOG_FILE src/in_arb_regs.v
+set_global_assignment -name VERILOG_FILE src/input_arbiter.v
+set_global_assignment -name VERILOG_FILE src/mac_grp_regs.v
+set_global_assignment -name VERILOG_FILE src/nf2_mac_grp.v
+set_global_assignment -name VERILOG_FILE src/rx_queue.v
+set_global_assignment -name VERILOG_FILE src/tx_queue.v
+set_global_assignment -name VERILOG_FILE src/jtag_bus.v
+set_global_assignment -name VERILOG_FILE src/nf2_core.v
+set_global_assignment -name VERILOG_FILE src/nf2_reg_grp.v
+set_global_assignment -name VERILOG_FILE src/dest_ip_filter.v
+set_global_assignment -name VERILOG_FILE src/eth_parser.v
+set_global_assignment -name VERILOG_FILE src/ip_arp.v
+set_global_assignment -name VERILOG_FILE src/ip_checksum_ttl.v
+set_global_assignment -name VERILOG_FILE src/ip_lpm.v
+set_global_assignment -name VERILOG_FILE src/op_lut_hdr_parser.v
+set_global_assignment -name VERILOG_FILE src/op_lut_process_sm.v
+set_global_assignment -name VERILOG_FILE src/output_port_lookup.v
+set_global_assignment -name VERILOG_FILE src/preprocess_control.v
+set_global_assignment -name VERILOG_FILE src/router_op_lut_regs_cntr.v
+set_global_assignment -name VERILOG_FILE src/router_op_lut_regs_non_cntr.v
+set_global_assignment -name VERILOG_FILE src/router_op_lut_regs.v
+set_global_assignment -name VERILOG_FILE src/unencoded_cam_lut_sm_lpm.v
+set_global_assignment -name VERILOG_FILE src/unencoded_cam_lut_sm.v
+set_global_assignment -name VERILOG_FILE src/oq_header_parser.v
+set_global_assignment -name VERILOG_FILE src/oq_reg_instances.v
+set_global_assignment -name VERILOG_FILE src/oq_regs_ctrl.v
+set_global_assignment -name VERILOG_FILE src/oq_regs_dual_port_ram.v
+set_global_assignment -name VERILOG_FILE src/oq_regs_eval_empty.v
+set_global_assignment -name VERILOG_FILE src/oq_regs_eval_full.v
+set_global_assignment -name VERILOG_FILE src/oq_regs_generic_reg_grp.v
+set_global_assignment -name VERILOG_FILE src/oq_regs_host_iface.v
+set_global_assignment -name VERILOG_FILE src/oq_regs.v
+set_global_assignment -name VERILOG_FILE src/output_queues.v
+set_global_assignment -name VERILOG_FILE src/remove_pkt.v
+set_global_assignment -name VERILOG_FILE src/store_pkt.v
+set_global_assignment -name VERILOG_FILE src/sram.v
+set_global_assignment -name VERILOG_FILE src/altgx_reconfig.v
+set_global_assignment -name VERILOG_FILE src/gen_reset_n.v
+set_global_assignment -name VERILOG_FILE src/pll_125.v
+set_global_assignment -name VERILOG_FILE src/pll.v
+set_global_assignment -name VERILOG_FILE src/reconfig_pll.v
+set_global_assignment -name VERILOG_FILE src/cam_ram_block.v
+set_global_assignment -name VERILOG_FILE src/ram_based_cam.v
+set_global_assignment -name VERILOG_FILE src/ram_block.v
+set_global_assignment -name VERILOG_FILE src/user_data_path.v
+set_global_assignment -name VERILOG_FILE src/udp_reg_master.v
+set_global_assignment -name VERILOG_FILE src/add_hdr.v
+set_global_assignment -name VERILOG_FILE src/add_rm_hdr.v
+set_global_assignment -name VERILOG_FILE src/rm_hdr.v
+set_global_assignment -name VERILOG_FILE src/device_id_reg.v
+set_global_assignment -name VERILOG_FILE src/fallthrough_small_fifo_v2.v
+set_global_assignment -name VERILOG_FILE src/pulse_synchronizer.v
+set_global_assignment -name VERILOG_FILE src/reg_grp.v
+set_global_assignment -name VERILOG_FILE src/small_async_fifo.v
+set_global_assignment -name VERILOG_FILE src/small_fifo_v3.v
+set_global_assignment -name VERILOG_FILE src/unused_reg.v
+set_global_assignment -name VERILOG_FILE src/generic_cntr_regs.v
+set_global_assignment -name VERILOG_FILE src/rxfifo_8kx9_to_36.v
+set_global_assignment -name VERILOG_FILE src/rxfifo_8kx9_to_72.v
+set_global_assignment -name VERILOG_FILE src/rxlengthfifo_128x13.v
+set_global_assignment -name VERILOG_FILE src/txfifo_1024x36_to_9.v
+set_global_assignment -name VERILOG_FILE src/txfifo_512x72_to_9.v
+set_global_assignment -name VERILOG_FILE src/pci2net_16x60.v
+set_global_assignment -name VERILOG_FILE src/syncfifo_512x36.v
+set_global_assignment -name VERILOG_FILE src/syncfifo_512x72.v
+set_global_assignment -name VERILOG_FILE src/hdr_fifo.v
+set_global_assignment -name VERILOG_FILE src/ethernet_rx_buffer.v
+set_global_assignment -name QIP_FILE src/rxfifo_8kx9_to_36.qip
+set_global_assignment -name QIP_FILE src/rxfifo_8kx9_to_72.qip
+set_global_assignment -name QIP_FILE src/rxlengthfifo_128x13.qip
+set_global_assignment -name QIP_FILE src/txfifo_1024x36_to_9.qip
+set_global_assignment -name QIP_FILE src/txfifo_512x72_to_9.qip
+set_global_assignment -name QIP_FILE src/pci2net_16x60.qip
+set_global_assignment -name QIP_FILE src/syncfifo_512x36.qip
+set_global_assignment -name QIP_FILE src/syncfifo_512x72.qip
+set_global_assignment -name QIP_FILE src/hdr_fifo.qip
+set_global_assignment -name VERILOG_FILE src/processing_element.v
+set_global_assignment -name VERILOG_FILE processing_element.v
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+#set_global_assignment -name MISC_FILE /home/deepak/Desktop/ring/Pagerank/snoopybus_pipeline/DE4_Ethernet_0/DE4_Ethernet.dpf
+
+set_global_assignment -name SIGNALTAP_FILE src/stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|clk" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=M9K" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name FITTER_EFFORT "AUTO FIT"
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "DE4_SOPC:SOPC_INST|compute_system:compute_system_0|it_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|output_port_lookup:output_port_lookup|op_lut_process_sm:op_lut_process_sm|packet_rcv[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "DE4_SOPC:SOPC_INST|ethernet_port_interface:ethernet_port_interface_0|nf2_core:nf2_core|user_data_path:user_data_path|packet_composer:composer|packet_sent[9]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=96" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=96" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=309" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=47761" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=59021" -section_id auto_signaltap_0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
