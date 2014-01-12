@@ -49,7 +49,7 @@ the optional libraries can be install via:
 
 Maestro Source Structure
 ------------------------
-
+```
 fpga/
 └── DE4_Ethernet_0
     ├── accumulator_channel.v
@@ -65,4 +65,4 @@ fpga/
     ├── compute_system_hw.tcl
     ├── compute_system.sv
     ├── data_loader.v
-
+```
