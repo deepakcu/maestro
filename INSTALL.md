@@ -46,3 +46,23 @@ the optional libraries can be install via:
 ```
 >sudo apt-get install wireshark
 ```
+
+Maestro Source Structure
+------------------------
+
+fpga/
+└── DE4_Ethernet_0
+    ├── accumulator_channel.v
+    ├── accumulator.v
+    ├── altpllpll_bb.v
+    ├── altpllpll.qip
+    ├── altpllpll.v
+    ├── binary_adder_tree.v
+    ├── coherence_controller.sv
+    ├── collector.sv
+    ├── command_defines.v
+    ├── compute.sv
+    ├── compute_system_hw.tcl
+    ├── compute_system.sv
+    ├── data_loader.v
+
