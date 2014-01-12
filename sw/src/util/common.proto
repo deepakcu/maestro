@@ -1,0 +1,86 @@
+package dsm;
+
+enum MessageTypes {
+  MTYPE_RUN_KERNEL = 1;
+  MTYPE_KERNEL_DONE = 2;
+  
+  MTYPE_PUT_REQUEST = 4;  
+  
+  MTYPE_GET = 5;
+    
+  MTYPE_WORKER_SHUTDOWN = 8;
+  MTYPE_REGISTER_WORKER = 9;
+  
+  MTYPE_START_CHECKPOINT = 10;
+  MTYPE_FINISH_CHECKPOINT = 11;
+  MTYPE_CHECKPOINT_DONE = 12;
+  
+  MTYPE_RESTORE = 13;
+  MTYPE_RESTORE_DONE = 14;
+  
+  MTYPE_WORKER_FLUSH = 15;
+  MTYPE_WORKER_FLUSH_DONE = 16;
+  
+  MTYPE_SHARD_ASSIGNMENT = 17;
+  MTYPE_SHARD_ASSIGNMENT_DONE = 18;
+  
+  MTYPE_ITERATOR = 20;
+
+  MTYPE_TERMCHECK_DONE = 21;
+  MTYPE_TERMINATION = 22;
+
+  MTYPE_SYNC_REPLY = 31;
+
+  MTYPE_WORKER_APPLY = 33;
+  MTYPE_WORKER_APPLY_DONE = 34;
+
+  MTYPE_SWAP_TABLE = 35;  
+  MTYPE_CLEAR_TABLE = 37;
+
+  MTYPE_ENABLE_TRIGGER = 38;
+};
+
+message EmptyMessage {}
+
+message Arg {
+  required bytes key = 1;
+  required bytes value = 2;
+}
+
+message Args {
+  repeated Arg param = 1;
+}
+
+message Record {
+  required bytes key = 1;
+  required bytes value1 = 2;
+  required bytes value2 = 3;
+  required bytes value3 = 4;
+}
+
+message Records {
+  repeated Record param = 1;
+}
+
+enum CompressionFormat {
+  NONE = 0;
+  LZO = 1;
+  ZLIB = 2;
+};
+
+message FileParams {
+  repeated Arg attr = 1;
+  optional int32 compression = 2 [default=0];
+}
+
+message ConfigData {
+  required int32 num_workers = 1;
+  required int32 worker_id = 2;
+  required int32 master_id = 3;
+}
+
+message TermcheckDelta {
+  required int32 index = 1;
+  required double delta = 2;
+  required int64 updates = 3;
+}

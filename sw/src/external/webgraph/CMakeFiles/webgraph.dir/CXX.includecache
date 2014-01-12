@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yzhang/piccolo/src/external/webgraph/webgraph.cc
+webgraph.h
+/home/yzhang/piccolo/src/external/webgraph/webgraph.h
+algorithm
+-
+iostream
+-
+map
+-
+assert.h
+-
+errno.h
+-
+zlib.h
+-
+
+/home/yzhang/piccolo/src/external/webgraph/webgraph.h
+stdexcept
+-
+string
+-
+vector
+-
+stdint.h
+-
+

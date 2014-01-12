@@ -1,0 +1,141 @@
+package dsm;
+
+import "util/common.proto";
+option optimize_for = SPEED;
+
+enum CheckpointType {
+  CP_NONE = 0;
+  CP_MASTER_CONTROLLED = 1;
+  CP_ROLLING = 2;
+};
+
+message RegisterWorkerRequest {
+  required int32 id = 1;
+}
+
+message ShardAssignment {
+  required int32 table = 1;
+  required int32 shard = 2;
+//  required int32 old_worker = 3;
+  required int32 new_worker = 4;
+}
+
+message ShardAssignmentRequest {
+  repeated ShardAssignment assign = 1;
+}
+
+message ShardInfo {
+  required uint32 table = 1;
+  required uint32 shard = 2;
+  required uint64 entries = 3;
+  required int32 owner = 4 [default = -1];
+}
+
+message MethodStats {
+  required double total_time = 1;
+  required double shard_time = 2;
+  required int32 calls = 3;
+  required int32 shard_calls = 4;
+};
+
+message KernelRequest {
+  required string kernel = 1;
+  required string method = 2;
+  optional int32 table = 3;
+  optional int32 shard = 4;
+  required Args args = 5;
+}
+
+message KernelDone {
+  required KernelRequest kernel = 1;
+  
+  // updated information about the state of this workers
+  // table shards.
+  repeated ShardInfo shards = 5;
+}
+
+message IteratorRequest {
+  required uint32 table = 1;
+  required uint32 shard = 2;  
+  optional int32 id = 3 [default = -1];
+  optional uint32 row_count = 4 [default = 1];
+}
+
+message IteratorResponse {
+  required uint32 id = 1;
+  required bool done = 2;
+  repeated bytes key = 3;
+  repeated bytes value = 4;
+  required uint32 row_count = 5;
+}
+
+message HashGet {
+  required uint32 table = 1;
+  required uint32 shard = 2;
+  optional bytes key = 3;
+  optional uint32 index = 4;
+}
+
+message TableData {
+  required uint32 source = 1;
+  required uint32 table = 2;
+  required uint32 shard = 3;
+  required bool done = 4;
+  
+  optional bytes table_data = 5;
+  repeated Record rec_data = 6;
+  
+  optional int32 epoch = 11;
+  optional int32 marker = 12 [default = -1];
+  
+  optional bool missing_key = 13;
+}
+
+message KVPairData {
+  required uint32 source = 1;
+  required uint32 table = 2;
+  required uint32 shard = 3;
+  required bool done = 4;
+  
+  optional bytes table_data = 5;
+  repeated Arg kv_data = 6;
+  
+  optional int32 epoch = 11;
+  optional int32 marker = 12 [default = -1];
+  
+  optional bool missing_key = 13;
+}
+
+message CheckpointRequest {
+  required int32 epoch = 1;
+  required int32 checkpoint_type = 2;
+  repeated int32 table = 3;
+}
+
+message TerminationNotification {
+  required int32 epoch = 1;
+}
+
+message StartRestore {
+  required int32 epoch = 1;
+}
+
+message CheckpointInfo {
+  required int32 checkpoint_epoch = 1;
+  required int32 kernel_epoch = 2;
+}
+
+message SwapTable {
+  required int32 table_a = 1;
+  required int32 table_b = 2;
+}
+
+message ClearTable {
+  required int32 table = 1;
+}
+
+message EnableTrigger {
+  required int32 trigger_id = 1;
+  required int32 table = 2;
+  required bool enable = 3;
+}

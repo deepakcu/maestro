@@ -1,0 +1,2 @@
+#!/bin/bash
+$QUARTUS_HOME/quartus/sopc_builder/bin/system-console --script=$1

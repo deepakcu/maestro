@@ -1,0 +1,2 @@
+/usr/bin/ar cr libwebgraph.a  CMakeFiles/webgraph.dir/webgraph.cc.o
+/usr/bin/ranlib libwebgraph.a

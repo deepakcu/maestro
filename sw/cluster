@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+#On all machines, stop the following daemons
+use warnings;
+
+$master="karma";
+@slaves=("karma","deepak-OptiPlex-780");
+@stype =("fpga", "fpga");
+$algorithm="pr";
+
+$scount=0;
+foreach (@slaves) {
+	#$command="ssh $_ /etc/init.d/avahi-daemon stop";
+	print "Stopping avahi daemon in $_\n";
+	system("ssh -t $_ 'bash -s' < cluster_init.sh"); 
+	#system("ssh $_ service avahi-daemon stop"); 
+	#system("ssh $_ service smbd stop"); 
+	#system("ssh $_ sudo /sbin/ifconfig eth1 0"); 
+	#system("ssh $_ sudo arp -s 10.1.1.1 00:4E:46:32:43:00 dev eth1"); 
+	#if($stype[$scount] eq "fpga") {
+		#Download the bit file
+	#	system("ssh $_  /home/deepak/altera/12.1/quartus/bin/download_sof ../../DE4_Ethernet_time_limited.sof"); 
+	#}
+	#$scount++;
+	#system(""); 
+}
+#/etc/init.d/avahi-daemon stop
+#service smbd stop
+
+

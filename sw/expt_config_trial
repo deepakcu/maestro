@@ -1,0 +1,57 @@
+#CPU Settings
+PORTION			=('0.1')	#fixed
+TERM_THRESHOLD		=('1')	#fixed
+TERM_CHECK_INTERVAL	=('1')	#fixed
+
+#FPGA Settings
+FPGA_PROCESSORS		=('1')
+N			=('1024')
+K			=('128')
+FILTER_THRESHOLD	=('0.001')
+GAP_CYCLES		=('4096')
+WORKERS			=('4')
+TYPE			=('fpga')
+
+#Algorithm settings
+#ALGO			=('Pagerank','Katz','Maxval')
+ALGO			=('Pagerank')
+
+#DATASET			=('100k','200k','300k','400k','500k','600k','700k','800k','900k','1000k','1100k','1200k','1300k')
+DATASET			=('1300k')
+
+
+#Outputs will be in
+#results.txt in the following format
+#	Experiment settings:
+#	Dataset:
+#	FPGA Processors:
+#	N
+#	K
+#	Filter threshold:
+#	Gap cycles
+#	Portion
+#	Term threshold
+#	Term_check_interval:
+#	Results:
+#		Map time
+#		Load time
+#		Flush time
+#		Check time val
+	
+#progress.txt in the following format
+#	Experiment settings:
+#	Dataset:
+#	FPGA Processors:
+#	N
+#	K
+#	Filter threshold:
+#	Gap cycles
+#	Portion
+#	Term threshold
+#	Term_check_interval:
+#	Results:
+#		Time	Progress val
+#		
+
+
+	

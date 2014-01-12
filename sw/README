@@ -1,0 +1,145 @@
+-- OVERVIEW
+
+-- PREREQUISITES
+
+To build and use Piccolo, you will need a minimum of the following:
+
+* CMake (> 2.6)
+* OpenMPI
+* Python (2.*)
+* gcc/g++ (> 4)
+* protocol buffers
+
+If available, the following libraries will be used:
+
+* Python development headers; SWIG
+* TCMalloc
+* google-perftools
+
+In addition to these, Piccolo comes with several support libraries which are 
+compiled as part of the build process; these are:
+
+* google-flags
+* google-logging
+
+
+On debian/ubuntu, the required libraries can be acquired by running:
+
+sudo apt-get install build-essential cmake g++ libboost-dev libboost-python-dev libboost-thread-dev liblzo2-dev libnuma-dev libopenmpi-dev libprotobuf-dev libcr-dev libibverbs-dev openmpi-bin protobuf-compiler liblapack-dev
+ 
+the optional libraries can be install via:
+
+sudo apt-get install libgoogle-perftools-dev python-dev swig
+
+-- BUILDING
+
+To build, simply run 'make' from the toplevel piccolo directory.  After building
+output should be available in the bin/ directory.  Specifically, a successful
+build should generate a bin/{debug,release}/examples/example-dsm binary.
+
+-- RUNNING
+
+To execute a Piccolo program, you will need to modify conf/mpi-cluster
+to point to the set of machines Piccolo will be executed on - for example, a file
+might look like:
+
+localhost slots=1
+a slots=4
+b slots=4
+c slots=4
+
+Which would allow for running up to 12 workers (+ 1 master process).
+
+With this file setup, you can run your Piccolo program via:
+
+bin/release/examples/example-dsm \
+ --runner=KMeans \
+ --num_points=10000 \
+ --num_clusters=100 \
+ --workers=12
+ 
+This will create and test a simple k-means clustering experiment using
+the workers specified.
+
+-- DEVELOPMENT
+
+For more information on how to create your own programs, check out the
+API documentation.
+
+*****************
+---Maestro README
+*****************
+
+1. Building Maestro software
+----------------------------
+Open Eclipse
+>eclipse&
+
+Set workspace as /home/deepak/Desktop/maiter_de4
+
+We define MAESTRO_HOME=/home/deepak/Desktop/maiter_de4/Maiter (export this in $HOME/.bashrc)
+From terminal,
+>cd $MAESTRO_HOME
+>make clean
+
+In Eclipse, do an update (Right click Maiter-> Team-> update Note: if updates are required - clean must be performed before applying updates)
+
+>Do a fresh build from terminal
+>cd $MAESTRO_HOME
+>make
+
+First time the setup is run on any machine, create a soft link for example-dsm
+>ln -s  bin/release/examples/example-dsm example-dsm
+This will create example-dsm executable in the base folder /home/deepak/Desktop/maiter_de4/Maiter
+
+2. Generating a graph
+---------------------
+>cd $MAESTRO_HOME
+Set parameter appropriately for the cluster in gengraph.sh
+Example - 1 node cluster
+WORKERS=2
+NODES=100000
+#:<<BLOCK
+#for pr
+GRAPH=input/pr_graph
+LOGN_DEGREE_M=-0.5
+LOGN_DEGREE_S=2.3
+WEIGHTED=false
+#BLOCK
+
+Example - 2 node cluster
+WORKERS=3
+NODES=100000
+#:<<BLOCK
+#for pr
+GRAPH=input/pr_graph
+LOGN_DEGREE_M=-0.5
+LOGN_DEGREE_S=2.3
+WEIGHTED=false
+#BLOCK
+
+Next, set cluster configuration in conf/mpi-cluster
+karma slots=1 				 [Master machine]
+karma slots=1 				 [Slave 0]
+deepak-ThinkPad-W520 slots=1 [Slave 1]
+deepak-OptiPlex-780 slots=1  [Slave 2]
+rcg-studio slots=1			 [Slave 3]
+
+>sh gengraph.sh
+See the generated graph in input/<projectname>/
+Example - input/pr_graph/part0
+If any errors, run
+>sh setup.sh
+>sh gengraph.sh
+
+
+3. Running an experiment
+------------------------
+1. Setup cluster
+>Select the algorithm and run the corresponding run script
+>sh pr.sh
+
+
+
+
+To run an experiment (Example - Pagerank)
