@@ -1,5 +1,5 @@
-WORKERS=5 #total workers = masters+slaves
-NODES=4800000 #total graph nodes
+WORKERS=2 #total workers = masters+slaves
+NODES=10000 #total graph nodes
 LOGN_WEIGHT_M=0			
 LOGN_WEIGHT_S=1.0 #sigma
 WEIGHTGEN=1

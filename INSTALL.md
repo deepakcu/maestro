@@ -69,13 +69,20 @@ fpga/
 
 Compiling FPGA Bitstream
 ------------------------
-To generate the FPGA bitstream, run make inside fpga source folder
-
+1. Navigate to FPGA source folder
 ```
 > cd fpga/DE4_Ethernet
-> make
 ```
-Compilation takes approximately 40 minutes on an Intel Core i7/8G RAM machine. When successful, you should see the DE4_Ethernet.sof programming bit generted in the FPGA source folder.
+
+2. Open Quartus project
+```
+> quartus DE4_Ethernet.qpf&
+```
+
+3. In Quartus, open Qsys system generator 
+4. Open DE4_Ethernet.qsys system file in the fpga/DE4_Ethernet source folder
+5. Click generate
+6. After successful system generation, compile the design in Quartus. Compilation takes approximately 40 minutes on an Intel Core i7/8G RAM machine. When successful, you should see the DE4_Ethernet.sof programming bit generted in the FPGA source folder.
 
 Preparing the Board
 -------------------
@@ -91,10 +98,11 @@ Compiling Software
 1. Compile Maestro software 
 
 ```
-> cd /home/deepak/Desktop/git/maestro/sw
+> cd maestro/sw
 > make
 ```
 2. The binary (example_dsm) will be generated under maestro/sw/bin/release/examples/. Create a soft-link for this binary under maestro/sw
+
 ```
 maestro/sw> ln -s bin/release/examples/example-dsm ./example-dsm
 ```
@@ -125,5 +133,22 @@ The input graph may be user supplied or generated using a script (see details he
 
 Generating a Synthetic Graph
 ----------------------------
+Maestro provides a script - gengraph.sh that you can customize to generate synthetic graphs. Several attributes of the generated graph can be customized by modifying gengraph.sh
 
+Sample gengraph.sh
+```
+WORKERS=2              #total workers = masters+slaves
+NODES=10000            #total graph nodes
+
+#for sp
+GRAPH=input/pr_graph   #location where the graph will be generated
+LOGN_DEGREE_M=-0.5     #logN degree
+LOGN_DEGREE_S=2.3      #logS degree
+LOGN_WEIGHT_M=0        #graph weight                 
+LOGN_WEIGHT_S=1.0      #weight
+WEIGHTED=false         #true for weighted graphs, else false
+WEIGHTGEN=2            #1/logn(m,s)
+```
+
+1. Configure cluster 
 

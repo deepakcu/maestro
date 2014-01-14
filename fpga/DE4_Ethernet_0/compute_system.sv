@@ -921,6 +921,7 @@ top_k_fill #(
 	.max_n_values		(max_n_values),
 
 	.start_key_process	(start_key_process),
+
    	.start_key_selection	(start_key_selection),
 	.threshold		(threshold)
 	
@@ -952,6 +953,8 @@ collector #(
 	.iteration_accum_value	(iteration_accum_value),
 	.max_fpga_procs		(max_fpga_procs)
 );
+
+
 
 wire [7:0] process_ext_updates;
 assign process_ext_updates = ~proc_bit_mask;

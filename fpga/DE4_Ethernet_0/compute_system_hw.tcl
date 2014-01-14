@@ -36,7 +36,7 @@ set_module_property ALLOW_GREYBOX_GENERATION false
 add_fileset QUARTUS_SYNTH QUARTUS_SYNTH "" ""
 set_fileset_property QUARTUS_SYNTH TOP_LEVEL compute_system
 set_fileset_property QUARTUS_SYNTH ENABLE_RELATIVE_INCLUDE_PATHS false
-add_fileset_file compute_system.v SYSTEM_VERILOG PATH compute_system.sv
+add_fileset_file compute_system.sv SYSTEM_VERILOG PATH compute_system.sv
 
 
 # 
