@@ -50,21 +50,57 @@ the optional libraries can be install via:
 Maestro Source Structure
 ------------------------
 ```
-fpga/
-└── DE4_Ethernet_0
-    ├── accumulator_channel.v
-    ├── accumulator.v
-    ├── altpllpll_bb.v
-    ├── altpllpll.qip
-    ├── altpllpll.v
-    ├── binary_adder_tree.v
-    ├── coherence_controller.sv
-    ├── collector.sv
-    ├── command_defines.v
-    ├── compute.sv
-    ├── compute_system_hw.tcl
-    ├── compute_system.sv
-    ├── data_loader.v
+maestro/
+├── fpga
+│   └── DE4_Ethernet_0 (Source folder for compiling the FPGA bitstream)
+│       ├── DE4_Ethernet.qpf (Quartus project)
+│       ├── DE4_Ethernet.qsf (Quartus project settings and pin assignments for Terasic DE-4)
+│       ├── de4_ethernet.v   (Project top-level file)
+│       ├── DE4_SOPC.qsys    (Qsys system generation file)
+│       ├── float_mega       (Megafunctions)
+│       ├── ip               (Altera Avalon read and write master template and presets)
+│       │   ├── Master_Template
+│       │   └── presets
+│       ├── Makefile         (Make script)
+│       ├── src              (Source folder for modified NetFPGA datapath)
+├── INSTALL.md               (This file)
+├── LICENSE                  (Apache 2.0 license)
+├── README.md                
+├── sw                       (Maestro software base folder)
+│   ├── bin
+│   │   └── release          
+│   │       ├── CMakeCache.txt (Software environment variables defined here)
+│   │       ├── examples
+│   │       │   ├── CMakeFiles
+│   │       │   ├── example-dsm (Maestro software executable generated here)
+│   │       │   └── Makefile
+│   ├── conf (Configuration of each worker - indicates whether worker is CPU/FPGA)
+│   │   ├── 0.conf
+│   │   ├── 1.conf
+│   │   ├── ...
+│   │   ├── mpi-cluster (Cluster configuration - indicates master and slave workers)
+│   ├── config (TCL script to bring-up Ethernet port interfaces
+│   ├── config_gige.tcl
+│   ├── config.tcl
+│   ├── destip.tcl
+│   ├── example-dsm -> bin/release/examples/example-dsm (Soft-link to executable example-dsm)
+│   ├── gengraph_pr.sh (Synthetic graph generation)
+│   ├── gengraph.sh    (Synthetic graph generation)
+│   ├── input          (Place input graphs that need to be processed in this folder)
+│   │   ├── pr_graph
+│   │   │   ├── part0  (Sample input graph)
+│   │   └── sp_graph
+│   ├── ip_arp_tables.txt
+│   ├── ip_tables.pl
+│   ├── jtag_config (Scripts to bring-up Ethernet port interfaces of Altera DE-4)
+│   ├── maxval.sh
+│   ├── pr.sh (Script to start graph processing)
+│   ├── result
+│   │   └── pr (Results folder)
+│   ├── setup_cluster.pl (Automation scripts for multi-board clusters)
+│   ├── src (Maestro C++ sources)
+
+
 ```
 
 Compiling FPGA Bitstream
