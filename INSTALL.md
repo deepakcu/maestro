@@ -120,6 +120,8 @@ Compiling FPGA Bitstream
 5. Click generate
 6. After successful system generation, compile the design in Quartus. Compilation takes approximately 40 minutes on an Intel Core i7/8G RAM machine. When successful, you should see the DE4_Ethernet.sof programming bit generted in the FPGA source folder.
 
+[Qsys system and Quartus Project Overview]( 
+
 Preparing the Board
 -------------------
 1. Insert the Hynix DDR2 DRAM module that ships with the Altera DE-4 package into the M1 DDR2 slot in the Altera DE-4 board.
@@ -164,7 +166,7 @@ Example:
 
 The input graph may be user supplied or generated using a script (see details here).
 
-2.  
+2. Specifying cluster configuration.  
 
 
 Generating a Synthetic Graph
@@ -186,5 +188,64 @@ WEIGHTED=false         #true for weighted graphs, else false
 WEIGHTGEN=2            #1/logn(m,s)
 ```
 
-1. Configure cluster 
+1. Specify cluster configuration in conf/mpi-cluster file
 
+Example: Sample 1 worker cluster configuration
+```
+localhost slots=1
+localhost slots=1
+```
+
+In this file, the first entry indicates the hostID (or IP address) of the worker.
+This is followed by hostIDs (IP addresses) of all slaves in the cluster.
+
+Example:Sample 2 worker cluster configuration
+```
+master_ip slots=1
+master_ip slots=1
+slave_ip slots=1
+```
+
+2. Ensure that all slaves are designated as CPU workers (for graph generation only).
+In conf directory, update each workers ID file
+Example:conf/0.conf
+```
+cpu    <ip_address_of_worker>  <tcp port>
+```
+
+For a 2 worker cluster, the conf files must look like
+0.conf
+```
+cpu    <ip_address_of_worker>  <tcp port>
+```
+
+1.conf
+```
+cpu    <ip_address_of_worker>  <tcp port>
+```
+
+3. Run gengraph.sh
+```
+>sh gengraph.sh
+```
+
+4. Generated graphs are produced under maestro/sw/input/<application_graph>/ folder (e.g. maestro/sw/pr_graph) as part files.
+For example, a part file would look like
+
+Example:
+```
+0       2133 2713 5974 8907
+1       1533 1827 3247 3804 5615 5956 7526 9568 9650 9768 9921
+2       3467
+3       8486
+```
+
+
+
+
+Youtube Screencasts
+-------------------
+1. [Architecture of Qsys system and Quartus Project](www.google.com)
+2. [Maestro 1 worker setup](http://www.youtube.com/watch?v=Th3KHCItKj0
+3. [Maestro 2 worker setup](http://www.youtube.com/watch?v=CZgDu77AdKg)
+4. [Setting up Network File System](http://www.youtube.com/watch?v=i02i8_DVac0)
