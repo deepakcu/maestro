@@ -166,7 +166,84 @@ Example:
 
 The input graph may be user supplied or generated using a script (see details here).
 
-2. Specifying cluster configuration.  
+2. Specifying cluster configuration. Maestro allows a worker to be designated as the master node. All 
+other workers are designated as slave nodes. Cluster configuration must be described in the mpi-cluster file located at maestro/sw/conf/mpi-cluster. The first line in this file indicates the hostname or IP address of the master node and task slots (you can always set 
+this number to 1).
+
+For example, a sample mpi-cluster file for a 1 worker cluster is given below:
+
+```
+10.1.1.1 slots=1
+10.1.1.1 slots=1
+```
+
+In this case, the worker with IP address (10.1.1.1) assumes the role of the master node and is responsible
+for tasks such as initiation the computation, checking computation progress and terminating the computation.
+Following lines in this file indicate the IP addresses of all slaves in the cluster (including that of the master
+if master also owns part of the computation). For example, in the example considered, the task is shared
+between the master (10.1.1.1) and slave (10.1.1.2).
+
+Further, the type of each worker must be specified in individual configuration files under maestro/sw/conf directory.
+Inside this folder, you will see configuration files in the following pattern: <worker_ID>.conf. Each file
+corresponds to the ID of the worker and the type (CPU/FPGA) for that worker.
+
+Sample type file for a CPU worker:
+```
+cpu    <ip_address_of_worker>  <tcp port>
+```
+
+Sample type file for an FPGA worker:
+```
+fpga    <ip_address_of_worker>  <tcp port>
+```
+
+For now, Maestro does not support heterogeneous workers (e.g. some CPUs and some FPGAs). So, you 
+must make sure that all type files have similar worker types (e.g. all CPUs or all FPGAs).
+
+3. Ensure that input files that require processing are placed under input/<application_name_graph> folder.
+Note that synthetic graphs can be generated if you wish using details provided here.
+
+4. Assign static IP to network interfaces. In this case, lets assume that the board is
+attached to eth1 interface of the PC. Static IP can be set on the PC side using ifconfig command:
+
+```
+> ifconfig eth1 10.1.1.1/24
+```
+
+The static IP must be set for packets sent by FPGA to be correctly received on the PC.
+
+5. Customize the algorithm file (e.g. pr.sh)
+
+Sample algorithm file
+```
+ALGORITHM=Pagerank 	#Choose algorithm (Pagerank, Katz, Maxval)
+WORKERS=5 		#workers=slaves+master E.g. for 2 FPGA machine, WORKERS=3
+GRAPH=input/pr_graph 	#directory where graph is stored
+RESULT=result/pr	#directory where results will be dumped
+NODES=4800000		#graph size (in terms of nodes)
+SNAPSHOT=1 		#ignore this parameter for now (used for fault-tolerance in maiter)
+SOURCE=0		#source node for katz metric
+TERMTHRESH=0.1 		#the algorithm stops when diff b/w two termchecks is less than this value
+PORTION=0.1		#Fraction of samples that will be selected for update (read priter paper - q/N parameter in algorithm)
+MAX_N=1024		#sample size (by default 1000 samples)
+#FILTER_THRESHOLD=0.0001	#a manual threshold set to filter very small values being propagated through n/w (written to FPGA)
+FILTER_THRESHOLD=0	#a manual threshold set to filter very small values being propagated through n/w (written to FPGA)
+FPGA_PROCS=1		#how many processors within the FPGA ?
+INTERPKT_GAP=32		#gap in clock cycles between two subsequent packet transmissions at sender side - can be adjusted to reduce transmission rate
+BUFMSG=2		#not sure what this is used for (was present in original Maiter)
+
+#setup_cluster will perform
+#	1. bitstream download
+#	2. automatic ip configuration in all machines
+#	3. run scripts to bring up netfpga interfaces
+#	4. run scripts to write to Maestro netfpga registers
+perl setup_cluster.pl $WORKERS $NODES $ALGORITHM $MAX_N $FILTER_THRESHOLD $INTERPKT_GAP $FPGA_PROCS
+
+for BUFMSG in 2
+do
+#deepak - correct one
+sudo ./example-dsm --runner=$ALGORITHM --workers=$WORKERS --graph_dir=$GRAPH --result_dir=$RESULT --num_nodes=$NODES --snapshot_interval=$SNAPSHOT --portion=$PORTION --shortestpath_source=$SOURCE --termcheck_threshold=$TERMTHRESH > log
+```
 
 
 Generating a Synthetic Graph
@@ -187,6 +264,13 @@ LOGN_WEIGHT_S=1.0      #weight
 WEIGHTED=false         #true for weighted graphs, else false
 WEIGHTGEN=2            #1/logn(m,s)
 ```
+
+Please take a look at setup_cluseter.pl file to understand cluster setup.
+
+6. Once the algorithm is run, results will be available under the folder
+maestro/sw/results/<algorithm_name>/ as part files. In general, these part files have the ID of
+each graph node followed by the attributed associated with the node (e.g. rank score of the webpage).
+
 
 1. Specify cluster configuration in conf/mpi-cluster file
 
