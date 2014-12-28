@@ -112,6 +112,7 @@ Compiling FPGA Bitstream
 2. Open Quartus project
 ```
 > quartus DE4_Ethernet.qpf&
+```
 3. In Quartus, open Qsys system generator 
 4. Open DE4_SOPC.qsys system file in the fpga/DE4_Ethernet source folder
 5. Click generate
