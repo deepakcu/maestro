@@ -109,41 +109,31 @@ Compiling FPGA Bitstream
 ```
 > cd fpga/DE4_Ethernet
 ```
-
 2. Open Quartus project
 ```
 > quartus DE4_Ethernet.qpf&
-```
-
 3. In Quartus, open Qsys system generator 
 4. Open DE4_SOPC.qsys system file in the fpga/DE4_Ethernet source folder
 5. Click generate
 6. After successful system generation, compile the design in Quartus. Compilation takes approximately 40 minutes on an Intel Core i7/8G RAM machine. When successful, you should see the DE4_Ethernet.sof programming bit generted in the FPGA source folder.
 
-Notes: 
 
-Note 1 - If Quartus compilation fails with any of the errors, use the following workaround:
+**Note 1** - If Quartus compilation fails with the error,
 
-```
-Error: SystemVerilog error at <location>: can't resolve aggregate expression in connection to port <number> on instance "<string>" because the instance has no module binding
+*Error: SystemVerilog error at <location>: can't resolve aggregate expression in connection to port <number> on instance "<string>" because the instance has no module binding*
 
-```
-
-Workaround:
-Add the file containing the module declaration (or an equivalent extern module declaration) to your Quartus II project.
-Click Project->Add current file to the project
+*Workaround: Add the file containing the module declaration (or an equivalent extern module declaration) to your Quartus II project. Click Project->Add current file to the project*
 
 For example, you may have to manually add the following files to the project
-```
+
 fifo_arbiter.sv, 
 snoopy_bus_arbiter.sv
 top_k_fill.sv
 collect.sv
-```
-Note 2 - If Quartus II analysis complains about the file compte_system.sv declared twice, remove the file compute_system.sv from the Quartus II Project. Right click compute_system.sv->remove file from the project.
 
+**Note 2** - Quartus II analysis complains about the file compte_system.sv declared twice.
+*Workaround: Remove the file compute_system.sv from the Quartus II Project. Right click compute_system.sv->remove file from the project.*
 
-[Qsys system and Quartus Project Overview]( 
 
 Preparing the Board
 -------------------
