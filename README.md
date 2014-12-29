@@ -5,7 +5,11 @@ A Framework to Accelerate Iterative Algorithms with Asynchronous Accumulative Up
 
 What is Maestro?
 ----------------
-Maestro is a distributed cluster computing framework for accelerating iterative algorithms using FPGAs. Iterative algorithms represent a pervasive class of data mining, web search and scientific computing applications. In iterative algorithms, a final result is derived by performing repetitive computations on an input data set (e.g. PageRank, Dijkstra's shortest path). Existing techniques to parallelize such algorithms  use software frameworks such as MapReduce and Hadoop to distribute data for an iteration across multiple CPU-based workstations in a cluster and collect per-iteration results. These platforms are marked by the need to synchronize data computations at iteration boundaries, impeding system performance. 
+Maestro is a distributed cluster computing framework to accelerate iterative algorithms using FPGAs. 
+
+Iterative Algorithms
+--------------------
+Iterative algorithms represent a pervasive class of data mining, web search and scientific computing applications. In iterative algorithms, a final result is derived by performing repetitive computations on an input data set (e.g. PageRank, Dijkstra's shortest path). Existing techniques to parallelize such algorithms  use software frameworks such as MapReduce and Hadoop to distribute data for an iteration across multiple CPU-based workstations in a cluster and collect per-iteration results. These platforms are marked by the need to synchronize data computations at iteration boundaries, impeding system performance. 
 
 Why Maestro?
 ------------
@@ -13,7 +17,7 @@ Maestro uses asynchronous accumulative updates to break these synchronization ba
 
 Maestro Speedup
 ---------------
-We have implemented a general-class of iterative algorithms have been implemented on a cluster of four FPGAs. Our experiments show that Maestro offers upto 140X speedup over Hadoop. Maestro shows speedup of 371X on a cluster consisting of four Altera DE-4 boards versus an equivalent Hadoop-based CPU-workstation cluster.
+We have implemented a general-class of iterative algorithms on a cluster of four Altera DE-4 FPGAs. Our experiments show that Maestro cluster of 4 Altera DE-4 FPGA boards offers upto 140X speedup over Hadoop. 
 
 Obtaining Source Code
 ---------------------
